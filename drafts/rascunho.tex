@@ -61,64 +61,138 @@ automação de processos industriais.
 
 	\subsection{Controlador Lógico Programável}
 	
-	O Controlador Lógico Programável - \textit{CLP} (do inglês, \textit{Programmable Logic Computer - PLC}),
-	é uma ferramenta fundamental na industria, pois foi projetado para o uso em um
-	ambiente industrial, capaz de resistir às adversidades presentes em uma fábrica,
-	tais como água, temperaturas extremas, impactos, sujeira em excesso, dentre outras.
+		O Controlador Lógico Programável - \textit{CLP} (do inglês, \textit{Programmable Logic Computer - PLC}),
+		é uma ferramenta fundamental na industria, pois foi projetado para o uso em um
+		ambiente industrial, capaz de resistir às adversidades presentes em uma fábrica,
+		tais como água, temperaturas extremas, impactos, sujeira em excesso, dentre outras.
 		
-	A International Electrotechinical Commission - \textit{IEC}, na norma 61131, define
-	o CLP como sendo um sistema eletrônico operando digitalmente, projetado 
-	para uso em um ambiente industrial, que usa uma  	memória programável para armazenar
-	internamente instruções orientadas para o usuário implementar funções especificas,
-	tais como lógica, seqüencial, temporização, contagem e aritmética, para controlar,
-	através de entradas e saídas	digitais ou analógicas, vários tipos de máquinas ou 
-	processos.
+		A International Electrotechinical Commission - \textit{IEC}, na norma 61131, define
+		o CLP como sendo um sistema eletrônico operando digitalmente, projetado 
+		para uso em um ambiente industrial, que usa uma  	memória programável para armazenar
+		internamente instruções orientadas para o usuário implementar funções especificas,
+		tais como lógica, seqüencial, temporização, contagem e aritmética, para controlar,
+		através de entradas e saídas	digitais ou analógicas, vários tipos de máquinas ou 
+		processos.
 	
-	O CLP é amplamente utilizado para o controle de processos industriais, por apresentar
-	alguns benefícios como a facilidade de instalação e programação, compatibilidade de rede,
-	verificação de defeitos, confiabilidade, além de reduzir muito a quantidade de fios e cabos
-	presente nos circuitos de controle a relé, como mostram as figuras X e Y.
+		O CLP é amplamente utilizado para o controle de processos industriais, por apresentar
+		alguns benefícios como a facilidade de instalação e programação, compatibilidade de rede,
+		verificação de defeitos, confiabilidade, além de reduzir muito a quantidade de fios e cabos
+		presente nos circuitos de controle a relé, como mostram as figuras X e Y.
 	
-	\textbf{INSERIR AS FIGURAS CLPControlPanel e ReleControlPanel}
+		\textbf{INSERIR AS FIGURAS CLPControlPanel e ReleControlPanel}
 	
-	Os CLPs tem algumas outras vantagens em relação aos controles a relé convencionais. Enquanto os relés
-	precisam ser instalados para executar uma função específica, e quando o sistema precisa de uma modificação,
-	os condutores do relé precisam ser substituídos ou modificados, os CLPs são mais flexíveis ao permitir
-	que o usuário apenas crie ou altere a lógica do programa armazenado nele.
-	Em controles a relé, o modo como os relés são interconectados regem as relações entre	entradas e saídas,
-	em um CLP, o usuário do programa é quem determina estas relações. A figura X ilustra as relações:
+		Os CLPs tem algumas outras vantagens em relação aos controles a relé convencionais. Enquanto os relés
+		precisam ser instalados para executar uma função específica, e quando o sistema precisa de uma modificação,
+		os condutores do relé precisam ser substituídos ou modificados, os CLPs são mais flexíveis ao permitir
+		que o usuário apenas crie ou altere a lógica do programa armazenado nele.
+		Em controles a relé, o modo como os relés são interconectados regem as relações entre	entradas e saídas,
+		em um CLP, o usuário do programa é quem determina estas relações. A figura X ilustra as relações:
 	
-	\textbf{INSERIR A FIGURA CLPInputOuputRelations}
+		\textbf{INSERIR A FIGURA CLPInputOuputRelations}
 	
-	Os CLPs tem grande capacidade de comunicação. Um CLP pode comunicar-se com outros CLPs ou qualquer outro
-	equipamento do computador criando uma rede capaz de realizar funções como supervisão do controle, coleta de dados,
-	dispositivos de monitoramento, e permitindo também baixar e transferir programas.
+		Os CLPs tem grande capacidade de comunicação. Um CLP pode comunicar-se com outros CLPs ou qualquer outro
+		equipamento do computador criando uma rede capaz de realizar funções como supervisão do controle, coleta de dados,
+		dispositivos de monitoramento, e permitindo também baixar e transferir programas.
 	
 		\subsubsection{Partes de um CLP}
-		Página 4 - Livro [2]
+			Página 4 - Livro [2]
+		
+			(Imagem mostrando entradas e saídas)
 	
 		\subsubsection{Siemens S7-1200}
-		DO MANUAL:
-		1. Introdução
-		1.2 Capacidade de expansão
-		3. Software de programação
-		3.2 pra pegar imagens
-		4. pra pegar imagens do CLP
-		6. Device configuration (Imagens tbm)
-		A.6 e A.6.3 (Pegar quantidade de portas e etc)
-		C. Ordering Information
+		
+			DO MANUAL:
+		
+			1. Introdução
+		
+			1.2 Capacidade de expansão
+		
+			3. Software de programação
+		
+			3.2 pra pegar imagens
+		
+			4. pra pegar imagens do CLP
+		
+			6. Device configuration (Imagens tbm)
+		
+			A.6 e A.6.3 (Pegar quantidade de portas e etc)
+		
+			C. Ordering Information
 
-	\subsection{Ladder Logic}
+	\subsection{Linguagens de Programação de um CLP}
+	
+		Um CLP pode ser programado usando algumas diferentes linguagens de programação, (Definição de linaguem de programação???).
+		
+		Para fins de pradonização, o IEC na norma 61131-3 sobre Linguagens de Programação,
+		definiu os padrões das linguagens utilizadas na programação de um CLP.
+
+		Algumas linguagens usadas para programar um CLP (Petruzella, 2014):
+		
+		\begin{itemize}
+			\item \textbf{Bloco de Funções (FBD)}
+			
+				Representação gráfica de fluxo de procedimentos que interconecta blocos simples
+				e complexos.
+				
+			\item \textbf{Diagrama Ladder (LD)}
+			
+				Uma representação gráfica de processos com degraus lógicos semelhantes aos esquemas
+				com lógica a relé.
+				
+			\item \textbf{Mapa de Funcção Sequencial (SFC)}
+			
+				Representação gráfica de passos, ações e transições interligadas.
+				
+			\item \textbf{Lista de Instruções (IL)}
+			
+				Linaguagem de baixo nível, baseada em texto e que usa instruções mnemônicas.
+				
+			\item \textbf{Texto Estruturado (ST)}
+			
+				Uma linguagem de alto nível, baseada em texto, como C, e que foi desenvolvida
+				especificamente para aplicações de controle industrial.
+				
+		\end{itemize}
+		
+		A figura X, ilustra o padrão IEC 61131-3 de linguagens para a programação de CLP.
+
+		\textbf{INSERIR A IMAGEM programming language for CLP}
+		
+		\subsubsection{Ladder Logic - LD}
+		
+			A linguagem em diagrama ladder(ou Ladder Logic) é a linguagem mais utilizada para CLP (Petruzella, 2014)
+			e é projetada para imitar a lógica a relé.
+		
+			A LD, como também é conhecida, é uma representação gráfica de dispositivos físicos
+			como sensores, botoeiras, bobinas, entre outros.
+			
+			Os elementos do programa são organizados em linha horizontais conhecidadas como
+			degraus que simulam um circuito elétrico. As linhas ficam entrer duas linhas
+			verticais conhecidas como trilhos.
+			
+			Contadores, somadores, bobinas, temporizadores, contatos, entre outras várias
+			operações de dados são organizados nos degraus do diagrama.
+			O gráfico ao final da programação fica semelhante a uma escada(do inglês \textit{ladder}), por isso o nome.
+			
+			A figura X a seguir mostra a organização de um programa feito em Ladder:
+			
+			\textbf{TIRAR PRINT DO TIA PORTAL COM UMA PROGRAMA SIMPLES}
+			
+			\textbf{EXPLICAR RAPIDAMENTE O PROGRAMA}
 
 	\subsection{Grafcet}
 
-	\subsection{SCADA}
+	\subsection{Aquisição de dados - SCADA}
+	
+		O sistema SCADA - \textit{Supervisory Control and Data Acquisition} 
 
 	\subsection{Bancada Festo}
 	
-	\subsection{TIA Portal v?}
-	DO manual:
-	7. Programming Concepts
+	\subsection{TIA Portal v14}
+	
+		DO manual:
+		
+		7. Programming Concepts
 	
 	\subsection{Factory I/O}
 	
