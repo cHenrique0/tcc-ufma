@@ -4,6 +4,8 @@
 \usepackage{amsmath, amsfonts, amssymb}
 \usepackage{float}
 \usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage[brazil]{babel}
 \usepackage{indentfirst}
 
@@ -77,18 +79,37 @@ automação de processos industriais.
 		O CLP é amplamente utilizado para o controle de processos industriais, por apresentar
 		alguns benefícios como a facilidade de instalação e programação, compatibilidade de rede,
 		verificação de defeitos, confiabilidade, além de reduzir muito a quantidade de fios e cabos
-		presente nos circuitos de controle a relé, como mostram as figuras X e Y.
-	
-		\textbf{INSERIR AS FIGURAS CLPControlPanel e ReleControlPanel}
+		presente nos circuitos de controle a relé, como mostram as Figuras \ref{fig:clp-control-panel} e \ref{fig:rele-control-panel}.
+		
+		\begin{figure}[H]
+			\centering
+			\begin{minipage}{.5\textwidth}
+			  \centering
+			  \includegraphics[width=.65\linewidth]{figures/CLPControlPanel.png}
+			  \captionof{figure}{Painel de controle com CLP}
+			  \label{fig:clp-control-panel}
+			\end{minipage}% não tirar esse o %
+			\begin{minipage}{.5\textwidth}
+			  \centering
+			  \includegraphics[width=.65\linewidth]{figures/ReleControlPanel.png}
+			  \captionof{figure}{Painel de controle a relés}
+			  \label{fig:rele-control-panel}
+			\end{minipage}
+		\end{figure}
 	
 		Os CLPs tem algumas outras vantagens em relação aos controles a relé convencionais. Enquanto os relés
 		precisam ser instalados para executar uma função específica, e quando o sistema precisa de uma modificação,
 		os condutores do relé precisam ser substituídos ou modificados, os CLPs são mais flexíveis ao permitir
 		que o usuário apenas crie ou altere a lógica do programa armazenado nele.
 		Em controles a relé, o modo como os relés são interconectados regem as relações entre	entradas e saídas,
-		em um CLP, o usuário do programa é quem determina estas relações. A figura X ilustra as relações:
+		em um CLP, o usuário do programa é quem determina estas relações. A Figura \ref{fig:clp-io-relation} mostra as relações:
 	
-		\textbf{INSERIR A FIGURA CLPInputOuputRelations}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{figures/CLPInputOutputRelation.png}
+			\caption{Entradas e Saídas de um CLP}
+			\label{fig:clp-io-relation}
+		\end{figure}
 	
 		Os CLPs tem grande capacidade de comunicação. Um CLP pode comunicar-se com outros CLPs ou qualquer outro
 		equipamento do computador criando uma rede capaz de realizar funções como supervisão do controle, coleta de dados,
@@ -154,9 +175,14 @@ automação de processos industriais.
 				
 		\end{itemize}
 		
-		A figura X, ilustra o padrão IEC 61131-3 de linguagens para a programação de CLP.
+		A Figura \ref{fig:progam-language-clp} ilustra o padrão IEC 61131-3 de linguagens para a programação de CLP.
 
-		\textbf{INSERIR A IMAGEM programming language for CLP}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{figures/programming_language_for_CLP_IEC-61131-3.png}
+			\caption{Linguagens de programação para CLP. IEC 61131-3.}
+			\label{fig:progam-language-clp}
+		\end{figure}
 		
 		\subsubsection{Ladder Logic - LD}
 		
@@ -195,12 +221,17 @@ automação de processos industriais.
 		banco de dados, ou num planilha simples, dependendo da aplicação, além de fornecer
 		informações do processo aos operadores.
 		
-		\textbf{INSERIR A FIGURA DO SCADA}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{figures/SCADA.png}
+			\caption{Sistema SCADA.}
+			\label{fig:scada}
+		\end{figure}
 		
 		O sistema SCADA permite o ajuste de processos com precisão para a eficiência máxima, e
 		independentemente do desempenho das funções de controle dos CLPs sobre os dispositivos
 		de campo enquanto são supervisionados por um de programa SCADA/HMI rodando em um computador
-		hospedeiro(host), como mostra a Figura X acima. Operadores de controle do processo monitoram
+		hospedeiro(host), como mostra a Figura \ref{fig:scada} acima. Operadores de controle do processo monitoram
 		a operação do CLP no host e, se necessário, enviam os comandos de controle para os CLPs.
 		
 		É importante frisar que mesmo os sistemas supervisórios sendo quase que autosuficientes, é sempre
