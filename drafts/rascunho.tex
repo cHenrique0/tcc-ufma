@@ -115,30 +115,37 @@ automação de processos industriais.
 		equipamento do computador criando uma rede capaz de realizar funções como supervisão do controle, coleta de dados,
 		dispositivos de monitoramento, e permitindo também baixar e transferir programas.
 	
-		\subsubsection{Partes de um CLP}
-			Página 4 - Livro [2]
+		\subsubsection{Siemens SIMATIC S7-1200}
 		
-			(Imagem mostrando entradas e saídas)
-	
-		\subsubsection{Siemens S7-1200}
+			O S7-1200 é um controlador fabricado pelo conglomerado industrial alemão Siemens. Ele oferece flexibilidade e poder
+			para controlar uma variedade de dispositivos em ambientes industriais. Tem uma estrutura compacta, medindo 11 x 10 x 7,5 centimetros,
+			uma configuração flexível, e um poderoso conjunto de instruções para controlar uma ampla variedade de aplicações.
 		
-			DO MANUAL:
-		
-			1. Introdução
+			Podemos ver algumas partes do S7-1200 na Figura \ref{fig:s7-1200-parts}:
+			
+			\begin{figure}[H]
+				\centering
+				\begin{minipage}{.5\textwidth}
+			  		\centering
+			  		\includegraphics[width=.65\linewidth]{figures/s7-1200_parts.png}
+				  \captionof{figure}{CLP Siemens S7-1200.}
+				  \label{fig:s7-1200-parts}
+				\end{minipage}% não tirar esse o %
+				\begin{minipage}{.5\textwidth}
+			  		\centering
+			  		\begin{enumerate}
+			  			\item Conector da fonte de alimentação
+			  			\item Espaço para cartão de memória (atrás da tampa)
+			  			\item Conectores de fios (atrás da tampa)
+			  			\item LEDs de status para entradas e saídas
+			  			\item Conector PROFINET (em baixo do CLP)
+			  		\end{enumerate}
+				\end{minipage}
+			\end{figure}
 		
 			1.2 Capacidade de expansão
 		
-			3. Software de programação
-		
-			3.2 pra pegar imagens
-		
-			4. pra pegar imagens do CLP
-		
-			6. Device configuration (Imagens tbm)
-		
 			A.6 e A.6.3 (Pegar quantidade de portas e etc)
-		
-			C. Ordering Information
 
 	\subsection{Linguagens de Programação de um CLP}
 	
@@ -206,6 +213,21 @@ automação de processos industriais.
 			
 			\textbf{EXPLICAR RAPIDAMENTE O PROGRAMA}
 
+	
+	\subsection{TIA Portal v14}
+	
+		DO manual:
+		
+		3. Software de programação
+		
+		3.2 pra pegar imagens
+		
+		6. Device configuration (Imagens tbm)
+		
+		7. Programming Concepts
+		
+		\subsubsection{Siemens S7-PLCSIM}
+	
 	\subsection{Sistemas Supervisórios - SCADA}
 		
 		Os sistemas supervisórios exercem uma importante e essencial tarefa no contexto
@@ -238,14 +260,6 @@ automação de processos industriais.
 		há a possibilidade de conflitos e erros de interpretação por parte do software.
 
 	\subsection{Bancada Festo}
-	
-	\subsection{TIA Portal v14}
-	
-		DO manual:
-		
-		7. Programming Concepts
-		
-		\subsubsection{Siemens S7-PLCSIM}
 	
 	\subsection{Factory I/O}
 	
