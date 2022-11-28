@@ -206,8 +206,6 @@ automação de processos industriais.
 			
 			\textbf{EXPLICAR RAPIDAMENTE O PROGRAMA}
 
-	\subsection{Grafcet}
-
 	\subsection{Sistemas Supervisórios - SCADA}
 		
 		Os sistemas supervisórios exercem uma importante e essencial tarefa no contexto
@@ -246,12 +244,56 @@ automação de processos industriais.
 		DO manual:
 		
 		7. Programming Concepts
+		
+		\subsubsection{Siemens S7-PLCSIM}
 	
 	\subsection{Factory I/O}
 	
+		O Factory I/O é um software de simulação 3D para aprender tecnologias de automação.
+		Ele permite construir rápidamente um ambiente virtual usando as peças industriais
+		mais comuns. Possui diversas cenas(como as plantas são chamadas dentro do software)
+		de apliações industriais típicas prontas para uso.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.4]{figures/factory_io_1.jpg}
+			\caption{Simualção no Factory I/O.}
+			\label{fig:factory_simulation}
+		\end{figure}
+		
+		O mais comum é utilizar o Factory I/O como plataforma de treinamento de CLP, pois
+		os CLPs 	são os controladores mais comuns nas aplicações industriais. Porém, pode
+		ser utilizados SoftPLC, microcontroladres, Modbus, entre várias outras tecnologias.
+	
 	\subsection{Digital Twin}
 
-\section{Metodologia do trabalho}
+\section{Metodologia da pesquisa}
+	
+	Nesta seção serão descritos os passos seguidos para o desenvolvimento do trabalho,
+	as ferramentas e os métodos utilizados.
+	A pesquisa foi dividida em 5 etapas:
+	\begin{enumerate}
+		\item Desenhar(simular) a planta real(bancada da Festo) no Factory I/O
+		\item Controlar a planta simulada utilizando o S7-PLCSIM
+		\item Controlar a planta simulada utilizando o CLP S7-1200
+		\item Controlar a planta real com o CLP S7-1200
+		\item Utilizar o CLP S7-1200 para controlar as plantas real e simulada ao mesmo tempo
+	\end{enumerate}
+
+	
+	Para esta pesquisa foram utilizadas os seguintes materiais:
+		
+	\begin{itemize}
+		\item Factory I/O - software para simulação da planta
+		\item TIA Portal versão 14 - software responsável pela programação do CLP
+		\item Siemens S7-1200 - o controlador real
+		\item S7-PLCSIM - o simulador de CLP integrado ao TIA Portal
+		\item Bancada da Festo
+	\end{itemize}
+
+	\subsection{Resultados Parciais}
+	
+	\textbf{INSERIR AS IMAGENS DO FACTORY E DA BANCADA}
 
 \section{Cronograma}
 
@@ -276,5 +318,7 @@ automação de processos industriais.
 [9] IEC 61131
 
 [10] IEC 61131-3
+
+[11] https://docs.factoryio.com/ (acesso em 28/11/2022)
 
 \end{document}
