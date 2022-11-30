@@ -11,14 +11,6 @@
 
 \begin{document}
 
-\begin{center}
-	\part*{Resumo}
-\end{center}
-
-\begin{center}
-	\part*{Abstract}
-\end{center}
-
 \section{Introdução}
 
 \textbf{1. Histórico}
@@ -88,7 +80,7 @@ automação de processos industriais.
 			  \includegraphics[width=.65\linewidth]{figures/CLPControlPanel.png}
 			  \captionof{figure}{Painel de controle com CLP}
 			  \label{fig:clp-control-panel}
-			\end{minipage}% não tirar esse o %
+			\end{minipage}% não tirar o %
 			\begin{minipage}{.5\textwidth}
 			  \centering
 			  \includegraphics[width=.65\linewidth]{figures/ReleControlPanel.png}
@@ -143,6 +135,7 @@ automação de processos industriais.
 				\end{minipage}
 			\end{figure}
 		
+			\textbf{TODO}
 			1.2 Capacidade de expansão
 		
 			A.6 e A.6.3 (Pegar quantidade de portas e etc)
@@ -191,6 +184,9 @@ automação de processos industriais.
 			\label{fig:progam-language-clp}
 		\end{figure}
 		
+		\textbf{TODO}
+		\textbf{MELHORAR O TEXTO DESSA SUBSEÇÃO}
+		
 		\subsubsection{Ladder Logic - LD}
 		
 			A linguagem em diagrama ladder(ou Ladder Logic) é a linguagem mais utilizada para CLP (Petruzella, 2014)
@@ -207,15 +203,22 @@ automação de processos industriais.
 			operações de dados são organizados nos degraus do diagrama.
 			O gráfico ao final da programação fica semelhante a uma escada(do inglês \textit{ladder}), por isso o nome.
 			
-			A figura X a seguir mostra a organização de um programa feito em Ladder:
+			A Figura \ref{fig:ladder_basic_example} a seguir mostra a organização de um programa feito em Ladder:
 			
-			\textbf{TIRAR PRINT DO TIA PORTAL COM UMA PROGRAMA SIMPLES}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{figures/ladder_basic_example.png}
+				\caption{Exemplo de um programa em Ladder.}
+				\label{fig:ladder_basic_example}
+			\end{figure}
 			
+			\textbf{TODO}
 			\textbf{EXPLICAR RAPIDAMENTE O PROGRAMA}
 
 	
 	\subsection{TIA Portal v14}
 	
+		\textbf{TODO}
 		DO manual:
 		
 		3. Software de programação
@@ -227,6 +230,8 @@ automação de processos industriais.
 		7. Programming Concepts
 		
 		\subsubsection{Siemens S7-PLCSIM}
+		
+			\textbf{TODO}
 	
 	\subsection{Sistemas Supervisórios - SCADA}
 		
@@ -261,12 +266,14 @@ automação de processos industriais.
 
 	\subsection{Bancada Festo}
 	
+		\textbf{TODO}
+	
 	\subsection{Factory I/O}
 	
 		O Factory I/O é um software de simulação 3D para aprender tecnologias de automação.
-		Ele permite construir rápidamente um ambiente virtual usando as peças industriais
-		mais comuns. Possui diversas cenas(como as plantas são chamadas dentro do software)
-		de apliações industriais típicas prontas para uso.
+		Ele permite construir rapidamente um ambiente virtual usando as peças industriais
+		mais comuns encontradas. O Factory I/O chama as simulações de cena, e ele possui diversas cenas de 
+		apliações industriais típicas prontas para uso.		
 		
 		\begin{figure}[H]
 			\centering
@@ -276,10 +283,12 @@ automação de processos industriais.
 		\end{figure}
 		
 		O mais comum é utilizar o Factory I/O como plataforma de treinamento de CLP, pois
-		os CLPs 	são os controladores mais comuns nas aplicações industriais. Porém, pode
+		os CLPs são os controladores mais comuns nas aplicações industriais. Porém, podem
 		ser utilizados SoftPLC, microcontroladres, Modbus, entre várias outras tecnologias.
 	
 	\subsection{Digital Twin}
+	
+		\textbf{TODO}
 
 \section{Metodologia da pesquisa}
 	
@@ -287,13 +296,12 @@ automação de processos industriais.
 	as ferramentas e os métodos utilizados.
 	A pesquisa foi dividida em 5 etapas:
 	\begin{enumerate}
-		\item Desenhar(simular) a planta real(bancada da Festo) no Factory I/O
-		\item Controlar a planta simulada utilizando o S7-PLCSIM
-		\item Controlar a planta simulada utilizando o CLP S7-1200
-		\item Controlar a planta real com o CLP S7-1200
-		\item Utilizar o CLP S7-1200 para controlar as plantas real e simulada ao mesmo tempo
+		\item Simular a planta real(bancada da Festo) no Factory I/O.
+		\item Controlar a planta simulada utilizando o S7-PLCSIM.
+		\item Controlar a planta simulada utilizando o CLP S7-1200.
+		\item Controlar a planta real com o CLP S7-1200.
+		\item Utilizar o CLP S7-1200 para controlar as plantas real e simulada ao mesmo tempo.
 	\end{enumerate}
-
 	
 	Para esta pesquisa foram utilizadas os seguintes materiais:
 		
@@ -304,10 +312,48 @@ automação de processos industriais.
 		\item S7-PLCSIM - o simulador de CLP integrado ao TIA Portal
 		\item Bancada da Festo
 	\end{itemize}
-
-	\subsection{Resultados Parciais}
 	
-	\textbf{INSERIR AS IMAGENS DO FACTORY E DA BANCADA}
+	\subsection{Criando uma simulação no Factory I/O}
+	
+		Primeiramente precisamos criar uma cena cliando na opção \textbf{New} no menu lateral esquerdo, como mostrado na
+		Figura \ref{fig:creating-scene-step1}:
+	
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{figures/creating_scene_step_1.png}
+			\caption{Criando uma nova cena no Factory I/O.}
+			\label{fig:creating-scene-step1}
+		\end{figure}
+		
+		Em seguida é necessário escolher quais equipamentos farão parte da cena. Na barra de ferramentas(\textbf{Toolbar}) há um botão
+		de nome \textbf{Pallet window}, ao clicar sobre ele, uma barra lateral irá se expandir mostrando uma seleção de equipamentos
+		industriais, basta escolher o que melhor se encaixa na simulação.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{figures/creating_scene_step_2.png}
+			\caption{Equipamentos industriais disponiveis no Factory I/O.}
+			\label{fig:creating-scene-step2}
+		\end{figure}
+		
+		A Figura \ref{fig:creating-scene-step2} mostra o botão \textbf{Pallet window} destacado pelo retângulo amarelo.
+		
+		Agora basta escolher o equipamento procurando-o na lista de equipamentos. Opcionalmente pode-se filtrar os esquipamentos
+		escrevendo seu nome na barra de pesquisa(\textbf{Search}) ou por categoria clicando na seção destacada pelo retângulo amarelo
+		na Figura \ref{fig:creating-scene-step3}.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.25]{figures/creating_scene_step_3.png}
+			\caption{Filtrando e escolhendo o equipamento correto.}
+			\label{fig:creating-scene-step3}
+		\end{figure}		
+		
+		Para adicionar o equipamento à cena, basta clicar sobre ele e arrastar até o local desejado. Mantendo a \textit{tecla V}
+		pressionada, podemos posicioná-lo no chão com mais facilidade. É possível ver estes passos na Figura \ref{fig:creating-scene-step3} acima.
+		
+		\textbf{TERMINAR}
+	\subsection{Simulando a planta real no Factory I/O}
 
 \section{Cronograma}
 
